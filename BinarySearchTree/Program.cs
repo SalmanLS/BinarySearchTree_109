@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BinarySearchTree
@@ -56,6 +57,19 @@ namespace BinarySearchTree
                 {
                     parent.rchild= tmp;
                 }
+            }
+        }
+        public void find(string element, ref Node parent, ref Node currentNode)
+        {
+            currentNode = ROOT;
+            parent =null;
+            while ((currentNode != null) && (currentNode.info != element))
+            {
+                parent = currentNode;
+                if (string.Compare(element, parent.info) <0)
+                    currentNode = currentNode.lchild;
+                else
+                    currentNode = currentNode.rchild;
             }
         }
     }
