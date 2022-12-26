@@ -2,11 +2,10 @@
 
 namespace BinarySearchTree
 {
-    class Program
+    
+     /* node class cons*/
+    class Node
     {
-        /* node class cons*/
-        class Node
-        {
             public string info;
             public Node lchild;
             public Node rchild;
@@ -19,7 +18,19 @@ namespace BinarySearchTree
                 lchild = l;
                 rchild = r;
             }
-        }
+
+
     }
+    class BinaryTree
+    {
+        public Node ROOT;
+
+        public BinaryTree()
+        {
+            ROOT = null; // initializing root to null
+        }
+
+    }
+    
 
 }
